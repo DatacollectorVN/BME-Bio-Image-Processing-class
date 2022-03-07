@@ -7,7 +7,6 @@ def main(image_file_path, a, b):
     img_clone = img_ori.copy()
     img_clone = img_clone * a + b
     img_clone = np.array(img_clone, dtype = np.uint8)
-    
     while True:
         cv2.imshow("image before", img_ori)
         cv2.imshow("image after", img_clone)
@@ -27,7 +26,6 @@ if __name__ == "__main__":
                         default = 1, help= "a parameter")
     parser.add_argument("--b", dest = "b", type = float, 
                         default = 0, help= "b parameter")
-    
     args = parser.parse_args()
     image_file_path = args.image_file_path
     a = args.a
