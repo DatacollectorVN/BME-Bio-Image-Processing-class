@@ -21,8 +21,8 @@ like- YCbCr, HSV, etc.; so, we can use them here for separating and then re-merg
 The proper way:
 Convert the colorspace from RGB to YCbCr >> Run HE on the Y channel (this channel represents brightness) 
 >> Convert back the colorspace to RGB
-
 '''
+
 def main(image_file_path):
     img_ori = cv2.imread(image_file_path)
     img_clone = img_ori.copy()
