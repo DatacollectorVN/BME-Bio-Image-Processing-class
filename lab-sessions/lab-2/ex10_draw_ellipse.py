@@ -7,7 +7,7 @@ def main():
     canvas = np.zeros(canvas_size, dtype = "uint8")
     
     # creating a ellipse
-    cv2.ellipse(canvas,(256,256),(100,50),0,0,180,255,-1)
+    cv2.ellipse(canvas, (256, 256), (100, 50), 0, 0, 180, 255, -1)
     while True:
         cv2.imshow(name_window, canvas)
         key = cv2.waitKey(0)
