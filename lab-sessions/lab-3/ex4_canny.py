@@ -26,7 +26,9 @@ def main(image_path, output_name, threshold1=100, threshold2=200):
     img = cv2.imread(image_path)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     canny_img = canny_function(img, threshold1 = threshold1, threshold2 = threshold2)
-    cv2.imshow("window", canny_img)
+    img = cv2.imread(image_path)
+    cv2.imshow("origin", img)
+    cv2.imshow("canny", canny_img)
     cv2.waitKey(0) 
     if output_name is not None:
         os.makedirs('./outputs', exist_ok = True)
