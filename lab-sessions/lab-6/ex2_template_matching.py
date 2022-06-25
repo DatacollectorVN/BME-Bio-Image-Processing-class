@@ -23,4 +23,9 @@ def main():
     cv2.waitKey(0)
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--imagepath", dest = "image_file_path", type = str,
+                        default = None, help = "Image file path")
+    args = parser.parse_args()
+    image_file_path = args.image_file_path
+    main()  
